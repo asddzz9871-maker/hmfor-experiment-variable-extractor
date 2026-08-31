@@ -1,0 +1,40 @@
+{
+  "version": "2026-08-30-v2",
+  "purpose": "Auditable reference-electrode-to-RHE conversion formulas. The extractor uses these for audit suggestions only unless all required assumptions are explicit.",
+  "rules": [
+    {
+      "reference": "Hg/HgO",
+      "electrolyte_hint": "KOH/alkaline",
+      "formula": "E_RHE = E_Hg/HgO + 0.098 + 0.0591*pH",
+      "requires": [
+        "pH",
+        "temperature_25C_assumption"
+      ],
+      "confidence_when_pH_inferred": "medium",
+      "notes": "Hg/HgO offset can vary by filling solution; verify paper details."
+    },
+    {
+      "reference": "Ag/AgCl",
+      "electrolyte_hint": "aqueous",
+      "formula": "E_RHE = E_Ag/AgCl + 0.197 + 0.0591*pH",
+      "requires": [
+        "pH",
+        "temperature_25C_assumption",
+        "AgCl_solution_assumption"
+      ],
+      "confidence_when_pH_inferred": "low",
+      "notes": "Offset depends on Ag/AgCl filling solution."
+    },
+    {
+      "reference": "SCE",
+      "electrolyte_hint": "aqueous",
+      "formula": "E_RHE = E_SCE + 0.241 + 0.0591*pH",
+      "requires": [
+        "pH",
+        "temperature_25C_assumption"
+      ],
+      "confidence_when_pH_inferred": "low",
+      "notes": "Only use after confirming the original potential is vs SCE."
+    }
+  ]
+}

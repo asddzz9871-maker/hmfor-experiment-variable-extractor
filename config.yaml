@@ -1,0 +1,73 @@
+# HMFOR extractor V2.1 configuration
+schema_version: hmfor-extractor-config-v2.1
+
+paths:
+  default_input_dir: test
+  default_output_dir: output-test
+  manual_overrides: manual_overrides.json
+  rhe_rules: rhe_conversion_rules.json
+  unit_rules: unit_normalization_rules.json
+
+runtime:
+  enable_doi_online_default: false
+  enable_si_download_default: false
+  enable_potential_conversion_default: false
+  max_download_size_mb: 10
+
+classification:
+  hmfor_categories:
+    - hmfor_core
+    - hmfor_related
+  background_categories:
+    - ni_co_background
+    - ai_catalysis_method
+    - exclude
+    - ocr_needed
+
+plot_ready_rules:
+  require_comparison_eligible: true
+  require_numeric_normalized_value: true
+  block_scale_needs_check: true
+  block_reference_section: true
+  block_very_low_confidence: true
+  block_duplicate_non_primary: true
+
+si_download_rules:
+  allowed_attachment_types:
+    - pdf
+    - docx
+  required_url_signals:
+    - supp
+    - suppl
+    - supporting
+    - supplement
+    - esm
+    - mmc
+    - moesm
+    - mediaobjects
+
+required_fields:
+  hmfor_core:
+    - catalyst_name
+    - electrolyte
+    - hmf_concentration
+    - potential_vs_rhe
+    - hmf_conversion
+    - fdca_yield
+    - faradaic_efficiency
+    - product_analysis_method
+    - best_performance_sentence
+  ni_co_background:
+    - catalyst_name
+    - catalyst_family
+    - substrate
+    - synthesis_method
+    - electrolyte
+    - reaction_type
+    - current_density
+    - recommended_use
+  exclude:
+    - title
+    - paper_category
+    - pdf_text_status
+    - review_notes

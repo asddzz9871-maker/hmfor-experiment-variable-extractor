@@ -1,0 +1,26 @@
+{
+  "version": "2026-08-30-v2",
+  "purpose": "Unit normalization rules used for audit logging and comparison tables.",
+  "rules": [
+    {
+      "pattern": "unicode minus variants",
+      "normalized": "-",
+      "conversion_type": "unicode_minus_normalized"
+    },
+    {
+      "pattern": "mA/cm2, mA cm−2, mA cm-2",
+      "normalized": "mA cm-2",
+      "conversion_type": "current_density_unit_standardized"
+    },
+    {
+      "pattern": "vs. RHE, vs RHE",
+      "normalized": "vs RHE",
+      "conversion_type": "rhe_label_standardized"
+    },
+    {
+      "pattern": "m KOH when used as molarity marker",
+      "normalized": "M KOH",
+      "conversion_type": "koh_molar_case_standardized"
+    }
+  ]
+}

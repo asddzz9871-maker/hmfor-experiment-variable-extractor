@@ -1,0 +1,106 @@
+{
+  "version": "2026-08-30-v1",
+  "purpose": "Manual calibration values for HMFOR extraction. Keep paper-specific corrections here instead of hard-coding them in extract_hmfor_variables.py.",
+  "overrides": [
+    {
+      "match": {
+        "file_name": "1-s2.0-S2468519425005853-main.pdf",
+        "doi": "10.1016/j.mtchem.2025.103095"
+      },
+      "note": "P04 manually checked HMFOR core paper.",
+      "fields": {
+        "paper_category": "hmfor_core",
+        "catalyst_name": "Ni1Co2-LDH/NF",
+        "ni_co_ratio": "best catalyst: Ni1Co2-LDH/NF; feeding Co(NO3)2 1.3 mmol, Ni(NO3)2 0.7 mmol",
+        "electrolyte": "1 M KOH + 10 mM HMF",
+        "koh_concentration": "1 M KOH",
+        "hmf_concentration": "10 mM HMF",
+        "cell_type": "H-type cell",
+        "electrode_configuration": "three-electrode",
+        "onset_potential_vs_rhe": "1.20 V vs RHE",
+        "performance_potential_vs_rhe": "1.30 V vs RHE",
+        "potential_vs_rhe": "1.30 V vs RHE",
+        "current_density": "80 mA cm-2 at 1.30 V vs RHE; 100 mA cm-2 at 1.32 V vs RHE for LSV activity",
+        "lsv_current_density": "100 mA cm-2 at 1.32 V vs RHE",
+        "product_analysis_condition": "10 mM HMF; 1 M KOH; 1.30 V vs RHE; 95 min; HMF conversion 100.0%; FDCA yield 95.6%; FE 90.5%",
+        "hmf_conversion": "HMF conversion 100.0%",
+        "hmf_conversion_value": "100.0",
+        "fdca_yield": "FDCA yield 95.6%",
+        "fdca_yield_value": "95.6",
+        "faradaic_efficiency": "FE 90.5%",
+        "faradaic_efficiency_value": "90.5",
+        "best_performance_sentence": "The optimum performance, with an HMF conversion of 100.0%, a FDCA yield of 95.6%, and a Faradaic efficiency (FE) of 90.5%, was achieved at 1.30 V vs RHE.",
+        "stability_performance": "After five consecutive electrolysis cycles, FDCA yield remained above 95.0% and FE was close to 91.0%.",
+        "product_analysis_method": "HPLC",
+        "hmfor_data_quality_score": "4",
+        "reproducibility_value": "high"
+      }
+    },
+    {
+      "match": {
+        "file_name": "Angewandte Chemie - 2023 - Liu - Pd Loaded NiCo Hydroxides for Biomass Electrooxidation  Understanding the Synergistic.pdf",
+        "doi": "10.1002/anie.202311696"
+      },
+      "note": "P07 manually checked HMFOR core paper.",
+      "fields": {
+        "paper_category": "hmfor_core",
+        "hmf_conversion": "HMF conversion rate 99.6%",
+        "hmf_conversion_value": "99.6",
+        "fdca_yield": "FDCA yield 96.5%",
+        "fdca_yield_value": "96.5",
+        "faradaic_efficiency": "FE 95.9%",
+        "faradaic_efficiency_value": "95.9",
+        "metal_loading": "Pd loading 3.8 wt%",
+        "mechanism_claim": "proton deintercalation and adsorption kinetics regulate biomass electrooxidation on Pd loaded NiCo hydroxides",
+        "best_performance_sentence": "At the end of the reaction, the HMF conversion rate was 99.6%, FDCA yield was 96.5%, and FE was 95.9%.",
+        "hmfor_data_quality_score": "3",
+        "reproducibility_value": "medium",
+        "onset_potential_vs_rhe": "1.32 V, scale needs check",
+        "performance_potential_vs_rhe": "1.38 V, scale needs check",
+        "potential_vs_rhe": "1.38 V, scale needs check",
+        "current_density": "50 mA/cm2 at 1.38 V, scale needs check",
+        "stability_performance": "five consecutive electrochemical cycles; yield and FE retained, exact values need manual check",
+        "stability": "five consecutive electrochemical cycles; yield and FE retained, exact values need manual check",
+        "cell_type": "needs_manual_check"
+      }
+    },
+    {
+      "match": {
+        "file_name": "s40820-024-01493-3.pdf",
+        "doi": "10.1007/s40820-024-01493-3"
+      },
+      "note": "P11 manually checked HMFOR core paper.",
+      "fields": {
+        "paper_category": "hmfor_core",
+        "catalyst_name": "Pd-NiCo2O4/NF",
+        "catalyst_family": "oxide",
+        "substrate": "NF",
+        "ni_co_ratio": "surface Ni/Co atomic ratio about 2:1; feeding ratio 1:2; ICP bulk Pd/Ni/Co 10.8/32.94/19.54 wt%",
+        "electrolyte": "1 M KOH + 50 mM HMF",
+        "koh_concentration": "1 M KOH",
+        "hmf_concentration": "50 mM HMF",
+        "cell_type": "LSV: single-compartment cell; chronoamperometry/product analysis: divided H-type cell with Nafion 117",
+        "electrode_configuration": "three-electrode; two-electrode HMFOR//HER",
+        "onset_potential_vs_rhe": "1.0 V vs RHE",
+        "performance_potential_vs_rhe": "1.5 V vs RHE",
+        "potential_vs_rhe": "1.5 V vs RHE",
+        "current_density": "800 mA cm-2 at 1.5 V vs RHE",
+        "lsv_current_density": "800 mA cm-2 at 1.5 V vs RHE",
+        "product_analysis_condition": "1 M KOH + 50 mM HMF; 1.5 V vs RHE; FDCA yield 99.5%; FDCA selectivity 99.2%; FE 99.6%",
+        "coupled_electrolyzer_performance": "HMFOR//HER: 100 mA cm-2 at 1.51 V",
+        "fdca_yield": "FDCA yield 99.5%",
+        "fdca_yield_value": "99.5",
+        "fdca_selectivity": "FDCA selectivity 99.2%",
+        "fdca_selectivity_value": "99.2",
+        "faradaic_efficiency": "FE 99.6%",
+        "faradaic_efficiency_value": "99.6",
+        "best_performance_sentence": "Pd-NiCo2O4 delivered 800 mA cm-2 at 1.5 V vs RHE with FE 99.6%, FDCA yield 99.5%, and FDCA selectivity 99.2%, with stable performance over repeated cycles.",
+        "stability_performance": "10-cycle stability reported with high FDCA yield and FE",
+        "metal_loading": "ICP bulk Pd/Ni/Co: 10.8/32.94/19.54 wt%",
+        "mechanism_claim": "competitive adsorption of OH- and HMF on cascade-tuned Pd-NiCo2O4 controls activity and stability",
+        "hmfor_data_quality_score": "4",
+        "reproducibility_value": "high"
+      }
+    }
+  ]
+}
